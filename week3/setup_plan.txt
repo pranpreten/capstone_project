@@ -1,0 +1,107 @@
+============================================================
+  3주차 실습 준비 계획서 - OpenCV 기반 영상 처리 심화 및 실습
+============================================================
+
+작성일: 2026-03-23
+과목: 지능화 캡스톤 프로젝트 (충북대학교)
+
+------------------------------------------------------------
+[현재 환경 확인 결과]
+------------------------------------------------------------
+- OS: Windows 10 Pro
+- Anaconda: conda 25.5.1 (설치됨)
+- Python: 3.13.5 (base)
+- GPU: NVIDIA GeForce RTX 3070 Laptop GPU
+- GPU Driver: 573.91 (설치됨)
+- CUDA: 설치됨 (드라이버 포함)
+
+결론: 기본 인프라 모두 준비 완료. 충분히 할만함!
+
+------------------------------------------------------------
+[할 일 목록]
+------------------------------------------------------------
+
+1. Conda 가상환경 생성
+   - 이름: week3_opencv
+   - Python 버전: 3.10 (OpenCV 호환성 안정적)
+   - 명령어: conda create -n week3_opencv python=3.10 -y
+
+2. 필요 라이브러리 설치
+   - opencv-python        : OpenCV 기본 모듈
+   - opencv-contrib-python: OpenCV 추가 모듈 (CUDA 관련 등)
+   - numpy                : 배열/행렬 연산
+   - matplotlib           : 히스토그램 그래프 출력용
+   - 명령어: pip install opencv-python opencv-contrib-python numpy matplotlib
+
+3. 실습용 샘플 이미지/영상 다운로드
+   - Lenna.png (이미지 읽기/출력, 그레이스케일, 색분리, HSV, 히스토그램 등)
+   - Candies.png (색상 영역 검출 실습)
+   - Hawkes.jpg (히스토그램 평활화/스트래칭)
+   - desert.jpg (히스토그램 역투영)
+   - test_video.mp4 (동영상 재생 - Kaggle에서 수동 다운로드 필요)
+
+4. 실습 예제 코드 작성 (PDF의 day3 폴더 구조 기준)
+   - ex1_opencv_readImg.py          : 이미지 파일 읽기/출력
+   - ex2_opencv_readVideo.py        : 동영상 파일 읽기/출력
+   - ex3_opencv_readCam.py          : 카메라 영상 읽기/출력
+   - ex4_opencv_split.py            : BGR 채널 분리
+   - ex5_opencv_cvtColor_HSV.py     : 색 공간 변경 (HSV)
+   - ex5_opencv_cvtColor_YUV.py     : 색 공간 변경 (YUV) [실습]
+   - ex6_opencv_extractColor_RGB.py : RGB 색상 영역 검출
+   - ex7_opencv_extractColor_HSV.py : HSV 색상 영역 검출 (빨간색)
+   - ex7_opencv_extractColor_HSV_blue.py : HSV 파란색 캔디 추출 [실습]
+   - ex8_opencv_histogram_gray.py   : 그레이스케일 히스토그램
+   - ex8_opencv_histogram_bgr.py    : BGR 히스토그램
+   - ex9_opencv_adjustWBR.py        : 명암비 조작
+   - ex10_opencv_equalizeHist.py    : 히스토그램 평활화
+   - ex11_opencv_normalizeHist.py   : 히스토그램 스트래칭
+   - ex12_opencv_backproj.py        : 히스토그램 역투영
+   - ex13_opencv_filtering.py       : 이미지 필터링 (평균, 샤프닝, 라플라시안)
+
+------------------------------------------------------------
+[난이도 평가]
+------------------------------------------------------------
+- 전체적으로 OpenCV 기초 실습이라 난이도 낮음 (쉬움~중간)
+- 코드가 PDF에 거의 다 나와있어서 따라하기 수월
+- 아나콘다, CUDA, GPU 드라이버 이미 설치되어 있으므로 환경 세팅 간단
+- 유일하게 수동으로 해야 할 것: test_video.mp4 (Kaggle 로그인 후 다운로드)
+
+------------------------------------------------------------
+[예상 소요 시간]
+------------------------------------------------------------
+- 환경 세팅 (가상환경 + 패키지): 5분
+- 이미지 다운로드: 2분
+- 예제 코드 작성: 이미 준비해둘 예정
+- 실제 실습 진행: 코드별 5~10분씩
+
+------------------------------------------------------------
+[폴더 구조 (완성시)]
+------------------------------------------------------------
+week3/
+  setup_plan.txt          <- 이 파일
+  images/
+    Lenna.png
+    Candies.png
+    Hawkes.jpg
+    desert.jpg
+    test_video.mp4         <- Kaggle에서 수동 다운로드
+  ex1_opencv_readImg.py
+  ex2_opencv_readVideo.py
+  ex3_opencv_readCam.py
+  ex4_opencv_split.py
+  ex5_opencv_cvtColor_HSV.py
+  ex5_opencv_cvtColor_YUV.py
+  ex6_opencv_extractColor_RGB.py
+  ex7_opencv_extractColor_HSV.py
+  ex7_opencv_extractColor_HSV_blue.py
+  ex8_opencv_histogram_gray.py
+  ex8_opencv_histogram_bgr.py
+  ex9_opencv_adjustWBR.py
+  ex10_opencv_equalizeHist.py
+  ex11_opencv_normalizeHist.py
+  ex12_opencv_backproj.py
+  ex13_opencv_filtering.py
+
+============================================================
+결론: 100% 할만함. 바로 세팅 가능!
+============================================================

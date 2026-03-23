@@ -1,0 +1,13 @@
+# 이미지/영상 파일 (용량 큼)
+week3/images/*.mp4
+week3/images/*.jpg
+week3/images/*.JPG
+week3/images/*.png
+
+# Python
+__pycache__/
+*.pyc
+
+# IDE
+.vscode/
+.idea/
