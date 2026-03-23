@@ -4,6 +4,9 @@ week3/images/*.jpg
 week3/images/*.JPG
 week3/images/*.png
 
+# 강의 PDF
+*.pdf
+
 # Python
 __pycache__/
 *.pyc
